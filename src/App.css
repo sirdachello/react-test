@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+.notes-container {
+  margin: 20px auto;
+  width: 50vw;
+}
+.notes-tabs-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+.notes-tab{
+  border: 1px solid black;
+  padding-inline: clamp(0 1em 1em);
+  padding-block: .2em;
+  flex-grow: 1;
+
+  
+  text-align: center;
+
+  transition-duration: 0.2s;
+  z-index: 1;
+  
+  &:hover {
+    background-color: rgb(141, 140, 90);
+    transform: scale(1.03);
+    border-radius: 5px;
+    z-index: 2;
+  }
+}
+.notes-tab.active {
+  background-color: rgb(141, 140, 90);
+  transform: scale(1.05);
+  border-radius: 5px;
+  z-index: 3;
+}
+.add-note-button {
+  height: 100%;
+}
+
+.notes-field {
+
+}
+
+.notes-field-textarea {
+  width: 100%;
+  height: 25vh;
+  resize: none;
+  hyphens: auto;
+}
+
+.foundMatches {
+  animation: glow 0.5s infinite alternate; 
+  z-index: 2;
+}
+
+@keyframes glow {
+  100% {transform: scale(1.05); background-color: yellowgreen; border-radius: 5px;}
+}
